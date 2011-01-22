@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>Demo faTabs</title>	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+	<script src="jquery.fatabs.min.js" type="text/javascript"></script>
+	<script>
+		$(function(){
+			//Default
+			//$(".fatabs").faTabs();
+			//With arrows
+			$(".fatabs").faTabs({arrows: true});
+			//With arrows fading
+			//$(".fatabs").faTabs({arrows: true, arrowsFade: true});
+			//Another panel class
+			//$(".fatabs").faTabs({panelClass: "panels"});
+			//Another arrows id
+			//$(".fatabs").faTabs({prevID: "arrow-prev",nextID: "arrow-next"});
+			
+		});
+	</script>
+	<style>
+	#holder {
+		padding: 0;
+	}
+
+	#holder li{
+	    display: block;
+	    float: left;
+	}
+
+	#holder a,#arrow-prev,#arrow-next{
+	    display: block;
+	    float: left;
+	    margin: 0px 10px;
+	    padding: 5px;
+	    text-decoration: none;
+	    color: #000;
+	}
+
+	#holder .ativo a{
+	    color: red;
+	}
+	.fatabs-panel {
+		display: none;
+	}
+	#arrow-prev,#arrow-next {
+		float:left;
+		width: 15px;
+		display: block;
+	}
+	</style>
+</head>
+<body>
+	<a href="#" id="arrow-prev"><</a>
+	<ul id="holder">
+		<li><a href="#tab1" class="fatabs">1</a></li>
+		<li><a href="#tab2" class="fatabs">2</a></li>
+		<li><a href="#tab3" class="fatabs">3</a></li>
+	</ul>
+	<a href="#" id="arrow-next">></a>
+	<br />
+	<div id="tab1" class="fatabs-panel">
+		<p>Tab 1</p>
+	</div>	
+	<div id="tab2" class="fatabs-panel">
+		<p>Tab 2</p>
+	</div>	
+	<div id="tab3" class="fatabs-panel">
+		<p>Tab 3</p>
+	</div>	
+</body>
+
+</html>
